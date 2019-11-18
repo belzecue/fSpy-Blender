@@ -32,13 +32,13 @@ class ImportfSpyProject(Operator, ImportHelper):
 
     filename_ext = ".fspy"
 
-    filter_glob = StringProperty(
+    filter_glob : StringProperty(
         default = "*.fspy",
         options = { 'HIDDEN' },
         maxlen= 255
     )
 
-    update_existing_camera = BoolProperty(
+    update_existing_camera : BoolProperty(
         name="Update existing import (if any)",
         description=(
             "If a camera and background image matching "
@@ -48,7 +48,7 @@ class ImportfSpyProject(Operator, ImportHelper):
         default=True
     )
 
-    import_background_image = BoolProperty(
+    import_background_image : BoolProperty(
         name="Import background image",
         description=(
             "Set the image from the fSpy project "
@@ -174,6 +174,10 @@ class ImportfSpyProject(Operator, ImportHelper):
 
                 # Make sure the background image slot is visible
                 bg.show_background_image = True
+
+                if hasattr(bg, 'view_axis'):
+                    # only show the background image when looking through the camera (< 2.8)
+                    bg.view_axis = 'CAMERA'
 
                 # Write project image data to a temp file
                 tmp_dir = bpy.app.tempdir
