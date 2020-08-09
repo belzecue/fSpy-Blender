@@ -10,14 +10,11 @@ This is the official [fSpy](https://fspy.io) importer add-on for [Blender](https
 
 ## 1. Download the add-on
 
-Download the latest version from [the releases page](https://github.com/stuffmatic/fSpy-Blender/releases). Make sure you download the file called `fSpy-Blender-x.y.z.zip`.
+[Download the latest version](https://github.com/stuffmatic/fSpy-Blender/releases/latest) (make sure you download the file called `fSpy-Blender-x.y.z.zip`).
 
 ### ⚠️ __Important note for mac users__ ⚠️
 
-Safari seems to unzip downloaded zip archives automatically by default. Since the add-on must be installed as a zip file, you have to do one of the following
-
-* Disable the auto-unzip behaviour and download the add-on again
-* Manually re-archive the automatically unzipped folder and point Blender to this file when installing
+If you're using Safari, make sure you __download the add-on by right clicking and choosing "Download Linked File"__. This prevents the the downloaded file from getting unzipped automatically.
 
 ## 2. Install the add-on
 
